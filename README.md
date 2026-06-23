@@ -8,11 +8,11 @@ It is An end-to-end machine learning pipeline built to identify high-risk teleco
 * *Primary Metric Focus:* Recall was prioritized over precision to ensure we catch the maximum number of actual churners, minimizing lost revenue.
 
 # Feature Importance
-Below are the top metrics driving the model's predictive power.
+This are the top metrics driving the model's predictive power.
 
 ![Feature Importance](feature_importance.png)
 
 # Tech Stack & Environment
-* **anguage:*Python 3.x
+* *Language:*Python
 * *Libraries:* Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib
 * *Environment:* VS Code on macOS

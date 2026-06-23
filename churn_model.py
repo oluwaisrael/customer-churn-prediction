@@ -45,7 +45,7 @@ from xgboost import XGBClassifier
 model = XGBClassifier(scale_pos_weight=3, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate
+
 predictions = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, predictions))
 import pandas as pd
@@ -59,7 +59,6 @@ print(feature_importance.head(10))
 print(classification_report(y_test, predictions))
 import matplotlib.pyplot as plt
 
-# Plot feature importance
 feature_importance.head(10).plot(kind="barh", figsize=(10, 6))
 plt.title("Top 10 Features Predicting Customer Churn")
 plt.xlabel("Importance Score")
@@ -67,3 +66,8 @@ plt.gca().invert_yaxis()
 plt.tight_layout()
 plt.savefig("feature_importance.png")
 print("Chart saved!")
+
+
+import joblib
+joblib.dump(model, "xgboost_churn_model.joblib")
+print("Model saved successfully as xgboost_churn_model.joblib!")
